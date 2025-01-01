@@ -45,6 +45,15 @@ public class ParamFlowRuleEntity extends AbstractRuleEntity<ParamFlowRule> {
         entity.setPort(port);
         return entity;
     }
+    
+    //这是热点参数规则，上面的函数 fromAuthorityRule命名不太规范，应该为 fromParamFlowRule
+    public static ParamFlowRuleEntity fromParamFlowRule(String app, String ip, Integer port, ParamFlowRule rule) {
+        ParamFlowRuleEntity entity = new ParamFlowRuleEntity(rule);
+        entity.setApp(app);
+        entity.setIp(ip);
+        entity.setPort(port);
+        return entity;
+    }
 
     @JsonIgnore
     @JSONField(serialize = false)
