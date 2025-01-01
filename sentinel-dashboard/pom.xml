@@ -98,11 +98,13 @@
             <artifactId>fastjson</artifactId>
         </dependency>
 
-        <!-- for Nacos rule publisher sample -->
+        <!-- for Nacos rule publisher sample  源码是test范围生效，由于需要与Nacos交互，该包引入了Nacos包，只需修改生效范围为全域-->
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-datasource-nacos</artifactId>
+<!--
             <scope>test</scope>
+-->
         </dependency>
         <!-- for Apollo rule publisher sample -->
         <dependency>
